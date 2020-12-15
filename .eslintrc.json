@@ -1,0 +1,24 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        // 引入eslint的核心功能，并且报告一些常见的共同错误。
+        "plugin:vue/essential"
+    ],
+    "plugins": [
+        "vue"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        //ES的版本，默认为5
+        "parser": "babel-eslint"
+    },
+    "rules": {
+        "indent": "off",
+        "no-console": "off"
+    }
+}
