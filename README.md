@@ -3,11 +3,13 @@
 vue 空框架，开箱即用
 
 ### 版本信息
+```text
 vue: 2.6.11
 ant-design: 1.7.2
 vue-router: 3.4.8
 axios: 0.21.0
 vuex: 3.5.1
+```
 ### package.json
 ```text
 "dependencies": {
