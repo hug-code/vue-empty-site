@@ -9,12 +9,13 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        sideCollapsed: false,
+        sideCollapsed: localStorage.getItem('sideCollapsed') === '1',
         sideTheme: 'light', // dark
     },
     mutations: {
         [SIDEBAR_TYPE]: (state, type) => {
             state.sideCollapsed = type
+            localStorage.setItem('sideCollapsed', (type === true ? '1' : '0'))
         },
         [SIDEBAR_THEME]: (state, type) => {
             state.sideTheme = type

@@ -24,3 +24,13 @@ export const getQueryParameters = (options) => {
         .replace(/&/g, '","')
         .replace(/=/g, '":"') + '"}')
 }
+
+
+/**
+ * 根据时间获取问候语句
+ * @returns {string}
+ */
+export function timeGreet() {
+    const hour = (new Date()).getHours()
+    return hour < 9 ? '早上好' : hour <= 11 ? '上午好' : hour <= 13 ? '中午好' : hour < 20 ? '下午好' : '晚上好'
+}

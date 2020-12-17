@@ -35,7 +35,11 @@ vuex: 3.5.1
 }
 ```
 ### 其他
-图片压缩使用 `image-webpack-loader` 包，npm安装会有问题，可以单独卸载这个包然后用cnpm安装
+图片压缩使用 `image-webpack-loader` 包，npm安装会有问题，启动时报错：
+```text
+Syntax Error: Error: Cannot find module 'imagemin-gifsicle'
+```
+解决办法：可以单独卸载这个包然后用cnpm安装
 ```text
 npm remove image-webpack-loader
 cnpm install --save-dev image-webpack-loader

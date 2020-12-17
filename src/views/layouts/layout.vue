@@ -37,7 +37,7 @@
         data() {
             return {
                 // 侧栏收起状态
-                collapsed: false,
+                collapsed: localStorage.getItem('sideCollapsed') === '1',
             };
         },
         created() {
