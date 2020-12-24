@@ -24,7 +24,7 @@ service.interceptors.response.use(response => {
             loginOutAndClearUser()
             router.push({name: 'login'})
         }
-        message.error(res.msg)
+        message.error(res.msg || '接口异常')
     }
     return res
 }, (error) => {
