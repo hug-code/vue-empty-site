@@ -6,7 +6,7 @@ import 'moment/locale/zh-cn'
 moment.locale('zh-cn')
 
 Vue.filter('time', (dataStr, pattern = 'YYYY-MM-DD HH:mm:ss') => {
-    return moment.unix(dataStr).format(pattern)
+    return dataStr ? moment.unix(dataStr).format(pattern) : '- - -'
 })
 
 Vue.filter('status', (value, model) => {
