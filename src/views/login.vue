@@ -39,8 +39,8 @@
             return {
                 loading: true,
                 fromData: {
-                    account: '',
-                    password: '',
+                    account: '15910000000',
+                    password: '123123123',
                 },
                 accountRule
             }
@@ -51,11 +51,13 @@
                     if (valid) {
                         this.loading = '登录中...'
                         account(this.fromData).then(res => {
+                            console.log(res)
                             if (res.code === 0 && res.data.token) {
                                 localStorage.setItem('token', res.data.token)
                                 delete res.data.token
                                 localStorage.setItem('info', JSON.stringify(res.data))
-                                this.$router.push({name: 'ArticleIndex'})
+                                this.$message.success('登陆成功')
+                                this.$router.push({name: 'Index'})
                             } else {
                                 this.loading = true
                             }

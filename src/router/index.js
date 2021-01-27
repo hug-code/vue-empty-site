@@ -15,7 +15,7 @@ const router = new Router({
 })
 
 router.beforeEach(async (to, from, next) => {
-    document.title = '图纸分析 - ' + to.meta.title;
+    document.title = '举杯邀月 - ' + to.meta.title;
     // let loginWhiteList = ['404', 'login'];
     // if(loginWhiteList.indexOf(to.name) < 0){
     //     if (localStorage.getItem('token')) {

@@ -33,6 +33,7 @@ const externals = {
     'axios': 'axios',
     'vue-router': 'VueRouter',
     'ant-design-vue': 'antd',
+    'mockjs': 'Mock',
 }
 
 module.exports = {
@@ -86,7 +87,7 @@ module.exports = {
                 cdn.all.css = cdn.all.css.concat(cdn.build.css)
             }
             args[0].cdn = cdn.all
-            args[0].title = '图纸分析'
+            args[0].title = '举杯邀月'
             return args
         })
         config.resolve.alias.set("@", resolve("src"));
