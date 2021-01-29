@@ -33,7 +33,7 @@ const externals = {
     'axios': 'axios',
     'vue-router': 'VueRouter',
     'ant-design-vue': 'antd',
-    'mockjs': 'Mock',
+    'mockjs': 'mockjs',
 }
 
 module.exports = {

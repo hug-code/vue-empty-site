@@ -46,3 +46,20 @@ npm remove image-webpack-loader
 cnpm install --save-dev image-webpack-loader
 ```
 
+### Nginx配置
+```shell
+server {
+    listen       80;
+    server_name  localhost;
+    root         /home/wwwroot/web;
+    index        index.php index.html index.htm;
+    
+    # 路由设置为 history 需要配置，否则子页刷新404
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # access_log  /home/logs/nginx/localhost.log;
+}
+```
+
